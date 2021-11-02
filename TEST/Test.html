@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <!-- I'm awere these is incomplete and it may not even be the way it was asked me to,
+    i diid used the best of my current abilities and the extra knowledge that i was able to get from studying these past 3 days,
+    I'm still commmited to my HTML studies and no matter what i will continue studying but i do apreciate the chance to apply to the offer, ald would really
+    love the chance to learn a lot with the bootcamp and the oportunity to proove myself as an asset to the company, thanks for everithing -->
+
+</head>
+<body>
+    <div class="head-borders"><div class="module-borders">
+        <h1>Weather</h1>
+    </div></div>
+
+    <div class="sidebar">
+        <div><img class="box1" src="/Logos/leanTech.svg"></div>
+        <div><img class="box2" src="/Logos/dashboard.svg"></div>
+    </div>
+    <br>
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">City</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/Cities/miami.html">Miami</a>
+          <a href="/Cities/bogota.html">Bogota</a>
+          <a href="/Cities/paris.html">Paris</a>
+          <a href="/Cities/londres.html">Londres</a>
+          <a href="/Cities/tokyo.html">Tokyo</a>
+          <a href="/Cities/seul.html">Seul</a>
+          <a href="/Cities/liboa.html">Liboa</a>
+          <a href="/Cities/medellin.html">Medellin</a>
+          <a href="/Cities/belgica.html">Belgica</a>
+        </div>
+      </div>
+      <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
